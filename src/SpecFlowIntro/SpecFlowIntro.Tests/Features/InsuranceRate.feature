@@ -3,6 +3,9 @@
 	As an agent
 	I'd like to be albe to calculate insurance rate
 
+Background:
+	Given I am logged in as John
+
 @LifeInsurance
 Scenario: Calculate life rate
 	Given following life expectancies exist

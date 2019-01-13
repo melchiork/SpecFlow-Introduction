@@ -68,6 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Basics.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Localized.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Localized.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\BasicsSteps.cs" />
     <Compile Include="Features\Hooks\ScenarioHooks.cs" />
     <Compile Include="Features\InsuranceRate.feature.cs">
@@ -82,6 +87,7 @@
     </Compile>
     <Compile Include="Steps\LifeInsuranceSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\UbezpieczeniaSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpecFlowIntro.App\SpecFlowIntro.App.csproj">
@@ -102,6 +108,10 @@
     <None Include="Features\InsuranceRates.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InsuranceRates.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Localized.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Localized.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

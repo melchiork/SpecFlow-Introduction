@@ -70,6 +70,14 @@ namespace SpecFlowIntro.Tests.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line 7
+ testRunner.Given("I am logged in as John", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Calculate life rate")]
         [NUnit.Framework.CategoryAttribute("LifeInsurance")]
@@ -77,9 +85,11 @@ namespace SpecFlowIntro.Tests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate life rate", null, new string[] {
                         "LifeInsurance"});
-#line 7
+#line 10
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
+#line 6
+this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Gender",
@@ -90,7 +100,7 @@ this.ScenarioInitialize(scenarioInfo);
             table1.AddRow(new string[] {
                         "Female",
                         "82"});
-#line 8
+#line 11
  testRunner.Given("following life expectancies exist", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -105,7 +115,7 @@ this.ScenarioInitialize(scenarioInfo);
             table2.AddRow(new string[] {
                         "C",
                         "71"});
-#line 12
+#line 15
  testRunner.And("following health rate expectancies exist", ((string)(null)), table2, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -118,7 +128,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "33",
                         "B",
                         "Higher"});
-#line 17
+#line 20
  testRunner.When("I submit following request for life insurance", ((string)(null)), table3, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -133,15 +143,15 @@ this.ScenarioInitialize(scenarioInfo);
                         "Premium",
                         "223",
                         "20.44"});
-#line 20
+#line 23
  testRunner.Then("the life insurance calculation is as follows", ((string)(null)), table4, "Then ");
-#line 24
- testRunner.When("I ask for discount for rate Premium for client Bob", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
- testRunner.Then("discount of 15% is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
- testRunner.When("I ask for discount for rate Premium for client Owen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 27
+ testRunner.When("I ask for discount for rate Premium for client Bob", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
+ testRunner.Then("discount of 15% is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 29
+ testRunner.When("I ask for discount for rate Premium for client Owen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 30
  testRunner.Then("discount of 8% is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
