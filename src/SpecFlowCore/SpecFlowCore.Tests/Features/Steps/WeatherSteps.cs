@@ -64,7 +64,7 @@ namespace SpecFlowCore.Tests.Features.Steps
 
         }
 
-        [Then(@"the certainty is '(.*)' %")]
+        [Then(@"the certainty is '(.*)'%")]
         public void ThenTheCertaintyIs(decimal expectedCertainty)
         {
             var certainty = _context.Get<decimal>("certainty");

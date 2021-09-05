@@ -62,5 +62,26 @@ namespace SpecFlowCore.Api.Controllers
 
             return result;
         }
+
+        [HttpPost("locations")]
+        public IActionResult CreateLocations(List<Location> locations)
+        {
+            Location.Revision++;
+            Location.Locations.AddRange(locations);
+
+            return Ok();
+        }
+
+        [HttpGet("locations")]
+        public List<Location> GetLocations()
+        {
+            return Location.Locations;
+        }
+
+        [HttpGet("locations/revision")]
+        public int GetLocationsRevision()
+        {
+            return Location.Revision;
+        }
     }
 }

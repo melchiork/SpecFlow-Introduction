@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using System;
+using System.Diagnostics;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using SpecFlowCore.Api;
 using TechTalk.SpecFlow;
@@ -6,8 +8,9 @@ using TechTalk.SpecFlow;
 namespace SpecFlowCore.Tests.Infra
 {
     [Binding]
-    public class Hooks
+    public class ServerHooks
     {
+        //TODO: Does this need to be run for every - even non-web api - tests?
         [BeforeScenario]
         public static void CreateTestServer(ScenarioContext scenarioContext)
         {

@@ -112,7 +112,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I ask for certainty in \'4\' days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 7
- testRunner.Then("the certainty is \'70\' %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the certainty is \'70\'%", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

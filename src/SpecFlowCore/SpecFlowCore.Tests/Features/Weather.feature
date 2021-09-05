@@ -4,7 +4,7 @@
 
 Scenario: Ask for certainty
 	When I ask for certainty in '4' days
-	Then the certainty is '70' %
+	Then the certainty is '70'%
 
 @api
 Scenario: Ask for the weather
