@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpecFlowCore.Tests.Integration
+namespace SpecFlowCore.Tests.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -40,7 +40,7 @@ namespace SpecFlowCore.Tests.Integration
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Integration", "Weather", "\tWeather should be reported", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Weather", "\tWeather should be reported", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,16 +80,14 @@ namespace SpecFlowCore.Tests.Integration
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Ask for the weather")]
+        [Xunit.SkippableFactAttribute(DisplayName="Ask for certainty")]
         [Xunit.TraitAttribute("FeatureTitle", "Weather")]
-        [Xunit.TraitAttribute("Description", "Ask for the weather")]
-        [Xunit.TraitAttribute("Category", "api")]
-        public virtual void AskForTheWeather()
+        [Xunit.TraitAttribute("Description", "Ask for certainty")]
+        public virtual void AskForCertainty()
         {
-            string[] tagsOfScenario = new string[] {
-                    "api"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ask for the weather", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ask for certainty", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -111,41 +109,26 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
- testRunner.Given("the location is \'Wroclaw\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When("I ask for certainty in \'4\' days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 7
- testRunner.When("I ask for the weather", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "TemperatureC",
-                            "Summary"});
-                table1.AddRow(new string[] {
-                            "26",
-                            "Hot"});
-                table1.AddRow(new string[] {
-                            "27",
-                            "Hot"});
-                table1.AddRow(new string[] {
-                            "28",
-                            "Hot"});
-#line 8
- testRunner.Then("the result should be as follows", ((string)(null)), table1, "Then ");
+ testRunner.Then("the certainty is \'70\' %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Ask for different weather")]
+        [Xunit.SkippableFactAttribute(DisplayName="Ask for the weather")]
         [Xunit.TraitAttribute("FeatureTitle", "Weather")]
-        [Xunit.TraitAttribute("Description", "Ask for different weather")]
+        [Xunit.TraitAttribute("Description", "Ask for the weather")]
         [Xunit.TraitAttribute("Category", "api")]
-        public virtual void AskForDifferentWeather()
+        public virtual void AskForTheWeather()
         {
             string[] tagsOfScenario = new string[] {
                     "api"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ask for different weather", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 15
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ask for the weather", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -165,10 +148,65 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 16
+#line 11
+ testRunner.Given("the location is \'Wroclaw\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 12
+ testRunner.When("I ask for the weather", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "TemperatureC",
+                            "Summary"});
+                table1.AddRow(new string[] {
+                            "26",
+                            "Hot"});
+                table1.AddRow(new string[] {
+                            "27",
+                            "Hot"});
+                table1.AddRow(new string[] {
+                            "28",
+                            "Hot"});
+#line 13
+ testRunner.Then("the result should be as follows", ((string)(null)), table1, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Ask for different weather")]
+        [Xunit.TraitAttribute("FeatureTitle", "Weather")]
+        [Xunit.TraitAttribute("Description", "Ask for different weather")]
+        [Xunit.TraitAttribute("Category", "api")]
+        public virtual void AskForDifferentWeather()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "api"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ask for different weather", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 20
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 21
  testRunner.Given("the location is \'Arctic\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 17
+#line 22
  testRunner.When("I ask for the weather", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -183,7 +221,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table2.AddRow(new string[] {
                             "-16",
                             "Freezing"});
-#line 18
+#line 23
  testRunner.Then("the result should be as follows", ((string)(null)), table2, "Then ");
 #line hidden
             }

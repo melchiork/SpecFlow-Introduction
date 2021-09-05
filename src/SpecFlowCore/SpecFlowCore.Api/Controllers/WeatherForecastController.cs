@@ -54,5 +54,13 @@ namespace SpecFlowCore.Api.Controllers
 
             return result;
         }
+
+        [HttpGet("certainty")]
+        public decimal GetCertainty([FromQuery]int days)
+        {
+            var result = 100 - (days * 7.5m);
+
+            return result;
+        }
     }
 }
