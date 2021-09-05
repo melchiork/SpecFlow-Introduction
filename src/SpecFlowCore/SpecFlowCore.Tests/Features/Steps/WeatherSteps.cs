@@ -19,7 +19,7 @@ namespace SpecFlowCore.Tests.Features.Steps
         {
             _context = context;
         }
-
+ 
         [Given(@"the location is '(.*)'")]
         public void GivenTheLocationIs(string location)
         {
